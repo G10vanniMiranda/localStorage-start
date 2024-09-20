@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h3>Seja Bem vindo!</h3>
+
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <button id="entrar">Entrar</button>
+
+    <p id="text_show"></p>
+    <script>
+        /* var1, let1, const1 */
+        let nome = document.querySelector('#nome')
+        let btn_entrar = document.querySelector('#entrar')
+
+        let show = document.querySelector("#text_show")
+
+        btn_entrar.onclick = function(e) {
+            e.preventDefault()
+
+            localStorage.setItem('meu_nome', nome.value)
+
+            window.location.href = "./painel.html"
+        }
+    </script>
+</body>
+</html>
